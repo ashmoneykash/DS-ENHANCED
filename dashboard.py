@@ -339,6 +339,7 @@ class Dashboard(QMainWindow):
         self.setWindowTitle("EV Analysis Dashboard - Washington State")
         self.setStyleSheet("background-color: #1e1e2f; color: white;")
         self.setGeometry(100, 100, 1200, 800)
+        self.setWindowIcon(QIcon("icons/header.png"))
         
         # Load data
         try:
