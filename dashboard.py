@@ -404,7 +404,7 @@ class Dashboard(QMainWindow):
         
         # Dashboard button (selected by default)
         self.dashboard_btn = QPushButton()
-        self.dashboard_btn.setIcon(self.style().standardIcon(QApplication.style().SP_FileDialogDetailedView))
+        self.dashboard_btn.setIcon(QIcon("icons/dashboard.png"))
         self.dashboard_btn.setIconSize(QSize(24, 24))
         self.dashboard_btn.setFixedSize(50, 50)
         self.dashboard_btn.setStyleSheet(button_style + "background-color: #4444aa;")
@@ -413,7 +413,7 @@ class Dashboard(QMainWindow):
         
         # Charts button
         self.charts_btn = QPushButton()
-        self.charts_btn.setIcon(self.style().standardIcon(QApplication.style().SP_FileDialogInfoView))
+        self.charts_btn.setIcon(QIcon("icons/charts1.png"))
         self.charts_btn.setIconSize(QSize(24, 24))
         self.charts_btn.setFixedSize(50, 50)
         self.charts_btn.setStyleSheet(button_style)
@@ -440,20 +440,20 @@ class Dashboard(QMainWindow):
         # Add buttons to sidebar
         sidebar_layout.addWidget(self.dashboard_btn)
         sidebar_layout.addWidget(self.charts_btn)
-        sidebar_layout.addWidget(self.map_btn)
-        sidebar_layout.addWidget(self.settings_btn)
+        #sidebar_layout.addWidget(self.map_btn)
+        #sidebar_layout.addWidget(self.settings_btn)
         
         # Add spacer at the bottom
         sidebar_layout.addStretch()
         
         # Add user icon at bottom
-        user_btn = QPushButton()
-        user_btn.setIcon(self.style().standardIcon(QApplication.style().SP_DialogApplyButton))
-        user_btn.setIconSize(QSize(24, 24))
-        user_btn.setFixedSize(50, 50)
-        user_btn.setStyleSheet(button_style)
-        user_btn.setToolTip("User Profile")
-        sidebar_layout.addWidget(user_btn)
+        # user_btn = QPushButton()
+        # user_btn.setIcon(self.style().standardIcon(QApplication.style().SP_DialogApplyButton))
+        # user_btn.setIconSize(QSize(24, 24))
+        # user_btn.setFixedSize(50, 50)
+        # user_btn.setStyleSheet(button_style)
+        # user_btn.setToolTip("User Profile")
+        # sidebar_layout.addWidget(user_btn)
         
         # Add sidebar to main layout
         self.main_layout.addWidget(sidebar_widget)
